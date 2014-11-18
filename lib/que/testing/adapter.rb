@@ -12,7 +12,7 @@ module Que
 
         job = JobParams.new(*params)
         klass = class_for(job.job_class)
-        klass.jobs << job
+        jobs[klass] << job
         params
       end
 
@@ -22,6 +22,10 @@ module Que
 
       def class_for(str)
         str.split('::').reduce(Object, &:const_get)
+      end
+
+      def jobs
+        @jobs ||= Hash.new { |h,k| h[k] = [] }
       end
     end
   end
