@@ -1,6 +1,6 @@
 # que-testing [![Build Status](https://travis-ci.org/statianzo/que-testing.svg?branch=master)](https://travis-ci.org/statianzo/que-testing)
 
-Testing support for the [Que](https://github.com/chanks/que) queue. que-testing allows you to enqueue jobs without a database, and without synchronous running.
+Testing support for the [Que](https://github.com/chanks/que) queue. que-testing allows you to enqueue jobs without a database and without synchronous running.
 
 ## Installation
 
