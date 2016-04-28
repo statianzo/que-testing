@@ -3,7 +3,7 @@ module Que
     class JobParams < Struct.new(:queue, :priority, :run_at, :job_class, :args)
     end
 
-    class Adapter
+    class Adapter < Que::Adapters::Base
       def checkout(&block)
       end
 
