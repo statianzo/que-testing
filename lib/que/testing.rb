@@ -1,6 +1,6 @@
 require "que"
 require "que/testing/que_ext"
-require "que/testing/adapter"
+require "que/testing/connection_pool"
 require "que/testing/version"
 
-Que.adapter = Que::Testing::Adapter.new
+Que.pool = Que::Testing::ConnectionPool.new
